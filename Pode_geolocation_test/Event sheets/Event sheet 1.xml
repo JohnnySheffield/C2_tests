@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-block sid="5">
+            <conditions>
+                <condition id="0" name="On clicked" sid="6" type="Button" />
+            </conditions>
+            <actions>
+                <action id="0" name="Request permisson" sid="9" type="Geolocation" />
+            </actions>
+        </event-block>
+        <event-block sid="10">
+            <conditions>
+                <condition id="0" name="Is request approved" sid="11" type="Geolocation" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="7" type="Text">
+                    <param id="0" name="Text">&quot;Lat:&quot; &amp;Geolocation.latitude</param>
+                </action>
+                <action id="1" name="Append text" sid="26" type="Text">
+                    <param id="0" name="Text">newline&amp;&quot;long: &quot;&amp;Geolocation.longitude</param>
+                </action>
+                <action id="1" name="Append text" sid="23" type="Text">
+                    <param id="0" name="Text">newline&amp;&quot;alt: &quot;&amp;Geolocation.altitude</param>
+                </action>
+                <action id="1" name="Append text" sid="24" type="Text">
+                    <param id="0" name="Text">newline&amp;&quot;altAcc: &quot;&amp;Geolocation.altitudeAccuracy</param>
+                </action>
+                <action id="1" name="Append text" sid="25" type="Text">
+                    <param id="0" name="Text">newline&amp;&quot;heading: &quot;&amp;Geolocation.heading</param>
+                </action>
+                <action id="1" name="Append text" sid="27" type="Text">
+                    <param id="0" name="Text">newline&amp;&quot;speed: &quot;&amp;Geolocation.speed</param>
+                </action>
+                <action id="1" name="Append text" sid="22" type="Text">
+                    <param id="0" name="Text">newline&amp;&quot;acc: &quot;&amp;Geolocation.accuracy</param>
+                </action>
+                <action id="1" name="Append text" sid="28" type="Text">
+                    <param id="0" name="Text">newline&amp;&quot;timestamp: &quot;&amp;Geolocation.timestamp</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="16">
+            <conditions>
+                <condition id="1" name="On error" sid="17" type="Geolocation" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="20" type="Text">
+                    <param id="0" name="Text">Geolocation.error</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
